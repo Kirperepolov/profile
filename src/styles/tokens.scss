@@ -1,0 +1,8 @@
+@use "./colors" as colors;
+
+:root {
+  --palette-background: #{colors.$background-color};
+  --palette-primary: #{colors.$primary-color};
+  --palette-accent: #{colors.$accent-color};
+  --palette-warning: #{colors.$warning-color};
+}

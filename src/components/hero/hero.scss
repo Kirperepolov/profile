@@ -1,0 +1,19 @@
+@use "/src/styles/theme" as theme;
+
+#hero {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -6rem;
+    right: -6rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 9999px;
+    background: radial-gradient(circle, theme.$accent-color 0%, transparent 70%);
+    opacity: .35;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,58 @@
+@use "/src/styles/theme" as theme;
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem 1.5rem;
+  padding: 1rem 7rem;
+  background-color: theme.$background-color;
+  border-bottom: 1px solid color-mix(in srgb, theme.$primary-color 12%, transparent);
+
+  @media (max-width: 640px) {
+    padding: 1rem 1.5rem;
+  }
+}
+
+.nav__brand {
+  font-weight: 600;
+  color: theme.$primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: theme.$accent-color;
+  }
+
+  &:focus-visible {
+    outline: 2px solid theme.$accent-color;
+    outline-offset: 2px;
+  }
+}
+
+.nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: theme.$primary-color;
+    text-decoration: none;
+    font-size: .95rem;
+
+    &:hover {
+      color: theme.$accent-color;
+    }
+
+    &:focus-visible {
+      outline: 2px solid theme.$accent-color;
+      outline-offset: 2px;
+    }
+  }
+}

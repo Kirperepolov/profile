@@ -1,0 +1,18 @@
+@use "/src/styles/theme" as theme;
+
+footer {
+  position: sticky;
+  bottom: 0;
+  background-color: theme.$background-color;
+  color: theme.$primary-color;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: 1rem 7rem;
+  text-align: center;
+  height: 4rem;
+}

@@ -1,0 +1,28 @@
+@use "/src/styles/theme" as theme;
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid color-mix(in srgb, theme.$primary-color 15%, transparent);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 2.5rem 1.75rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.timeline-item__marker {
+  position: absolute;
+  top: .35rem;
+  left: -.375rem;
+  width: .75rem;
+  height: .75rem;
+  border-radius: 9999px;
+  background-color: theme.$accent-color;
+  border: 2px solid theme.$background-color;
+}

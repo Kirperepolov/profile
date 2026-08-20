@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "description": "Personal portfolio website built with React, TypeScript, and Tailwind CSS.",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/unpack-content.js",
+    "dev": "vite",
+    "prebuild": "node scripts/unpack-content.js",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "pack:content": "node scripts/pack-content.js"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^19.2.4",
+    "@types/react": "^19.2.4",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.2",
+    "sass": "^1.102.0",
+    "tailwindcss": "^4.3.3"
+  }
+}

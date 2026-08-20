@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: var(--palette-background);
+    --color-primary: var(--palette-primary);
+    --color-accent: var(--palette-accent);
+    --color-warning: var(--palette-warning);
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--color-background);
+}
+
+body {
+    background-color: var(--color-background);
+}

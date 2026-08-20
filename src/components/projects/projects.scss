@@ -1,0 +1,7 @@
+@use "/src/styles/theme" as theme;
+
+.project-card {
+  padding: 1.5rem;
+  border: 1px solid color-mix(in srgb, theme.$primary-color 12%, transparent);
+  border-radius: .75rem;
+}
