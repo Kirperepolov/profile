@@ -1,6 +1,6 @@
 import React from "react";
 
-import type {TimelineEntry} from "../../data/types";
+import type {TimelineEntry} from "../../types/types.ts";
 
 interface TimelineItemProps {
     entry: TimelineEntry;

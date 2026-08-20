@@ -37,12 +37,17 @@ try {
 
 const manifest = JSON.parse(gunzipSync(payload).toString('utf8'));
 
-let count = 0;
+let restored = 0;
+let skipped = 0;
 for (const [relPath, base64] of Object.entries(manifest)) {
     const fullPath = join(ROOT, relPath);
+    if (existsSync(fullPath)) {
+        skipped++;
+        continue;
+    }
     mkdirSync(dirname(fullPath), {recursive: true});
     writeFileSync(fullPath, Buffer.from(base64, 'base64'));
-    count++;
+    restored++;
 }
 
-console.log(`Unpacked ${count} file(s) from content.enc.`);
+console.log(`Unpacked ${restored} file(s) from content.enc.${skipped ? ` Skipped ${skipped} already-present file(s) — delete a file first if you want it re-restored from content.enc.` : ''}`);

@@ -1,6 +1,6 @@
 import React from "react";
 
-import type {ProjectEntry} from "../../data/types";
+import type {ProjectEntry} from "../../types/types.ts";
 
 interface ProjectCardProps {
     project: ProjectEntry;

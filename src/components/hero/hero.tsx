@@ -1,6 +1,7 @@
 import React from "react";
 
 import './hero.scss';
+import {cvDownload} from "../../data/contact";
 
 const tags = ['Full-stack', 'Product-minded', 'Technical leadership'];
 
@@ -45,6 +46,13 @@ export function Hero() {
                         className="rounded-full border border-primary px-6 py-3 font-medium text-primary transition-colors hover:bg-primary hover:text-background focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                     >
                         Get in touch
+                    </a>
+                    <a
+                        href={cvDownload.href}
+                        download={cvDownload.download}
+                        className="rounded-full border border-primary px-6 py-3 font-medium text-primary transition-colors hover:bg-primary hover:text-background focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                    >
+                        {cvDownload.label}
                     </a>
                 </div>
             </div>

@@ -4,7 +4,7 @@ import {gzipSync} from 'node:zlib';
 import {randomBytes, scryptSync, createCipheriv} from 'node:crypto';
 
 const ROOT = process.cwd();
-const TARGET_DIRS = ['src/data'];
+const TARGET_DIRS = ['src/data', 'public/cv'];
 
 function collectFiles(dir, acc = []) {
     const fullDir = join(ROOT, dir);
@@ -34,7 +34,7 @@ if (!key) {
 
 const files = TARGET_DIRS.flatMap(dir => collectFiles(dir));
 if (files.length === 0) {
-    console.error('No files found under src/data — nothing to pack.');
+    console.error('No files found under src/data or public/cv — nothing to pack.');
     process.exit(1);
 }
 

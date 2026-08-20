@@ -16,6 +16,16 @@ nav {
   @media (max-width: 640px) {
     padding: 1rem 1.5rem;
   }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: theme.$background-color;
+  }
 }
 
 .nav__brand {
